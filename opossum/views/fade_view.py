@@ -1,6 +1,6 @@
 from PySide6 import QtCore, QtWidgets, QtGui
-import random
 from os.path import expanduser
+
 
 class FadeView(QtWidgets.QWidget):
 
@@ -19,27 +19,26 @@ class FadeView(QtWidgets.QWidget):
         self.words_line.resize(140, 30)
 
         self.file_dialog_label = QtWidgets.QLabel(self)
-        self.file_dialog_label.resize(500, 30)
+        self.file_dialog_label.resize(200, 30)
         self.file_dialog_label.move(20, 0)
 
         self.folder_selector = None
         self.file_dialog_button = QtWidgets.QPushButton('project folder', self)
         self.file_dialog_button.clicked.connect(self.open_folder_selector)
-        self.file_dialog_button.resize(200,30)
+        self.file_dialog_button.resize(200, 30)
         self.file_dialog_button.move(20, 25)
 
         self.ok_button = QtWidgets.QPushButton('OK', self)
         self.ok_button.clicked.connect(self.fade)
-        self.ok_button.resize(200,30)
+        self.ok_button.resize(200, 30)
         self.ok_button.move(20, 105)
 
         self.opossum_label = QtWidgets.QLabel(self)
         self.opossum_pixmap = QtGui.QPixmap('./views/pictures/possum.png')
         self.opossum_label.setPixmap(self.opossum_pixmap)
-        self.opossum_label.resize(self.opossum_pixmap.width(), self.opossum_pixmap.height())
+        self.opossum_label.resize(
+            self.opossum_pixmap.width(), self.opossum_pixmap.height())
         self.opossum_label.move(20, 140)
-
-
 
     @QtCore.Slot()
     def open_folder_selector(self):

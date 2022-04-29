@@ -1,9 +1,6 @@
-import argparse
 import os
 import random
-from PySide6 import QtCore, QtWidgets, QtGui
-from views.fade_view import FadeView
-import sys
+
 
 class FadeController():
 

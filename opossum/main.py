@@ -1,10 +1,8 @@
-import argparse
-import os
-import random
-from PySide6 import QtCore, QtWidgets, QtGui
+from PySide6 import QtWidgets
 from views.fade_view import FadeView
 from controllers.fade_controller import FadeController
 import sys
+
 
 def main():
     app = QtWidgets.QApplication([])
@@ -13,6 +11,7 @@ def main():
     widget.resize(245, 410)
     widget.show()
     sys.exit(app.exec())
+
 
 if __name__ == "__main__":
     main()
